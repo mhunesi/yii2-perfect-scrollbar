@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist mhunesi/yii2-perfect-scrollbar "*"
+composer require mhunesi/yii2-perfect-scrollbar "*"
 ```
 
 or add
@@ -28,9 +28,19 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \mhunesi\scrollbar\PerfectScrollbar::begin(); ?>```
+<?= \mhunesi\scrollbar\PerfectScrollbar::begin([
+        'width' => 200,
+        'height' => 200,
+        'options' => [
+            'class' => 'p-2 mb-5',
+        ],
+        'clientOptions' => [
+            'wheelPropagation' => true
+        ]
+]) ?>
 
-content 
+    <p> HTML Content </p>
 
-```php
-<?= \mhunesi\scrollbar\PerfectScrollbar::end(); ?>```
+<?= \mhunesi\scrollbar\PerfectScrollbar::end() ?>
+
+```
