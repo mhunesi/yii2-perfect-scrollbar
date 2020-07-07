@@ -14,17 +14,12 @@ class PerfectScrollbar extends \yii\base\Widget
     /**
      * @var int
      */
-    public $height = 250;
+    public $height = '250px';
 
     /**
      * @var int
      */
-    public $width = 250;
-
-    /**
-     * @var string
-     */
-    public $unit = 'px';
+    public $width = '250px';
 
     /**
      * @var array the HTML attributes for the widget container tag. The following special options are recognized:
@@ -53,8 +48,8 @@ class PerfectScrollbar extends \yii\base\Widget
         $style = array_merge([
             'position' => 'relative',
             'overflow' => 'auto',
-            'width' => $this->width . $this->unit,
-            'height' => $this->height . $this->unit,
+            'width' => $this->width,
+            'height' => $this->height,
         ],ArrayHelper::getValue($this->options,'style',[]));
 
         $this->options = array_merge($this->options,[
