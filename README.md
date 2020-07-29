@@ -28,9 +28,9 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \mhunesi\scrollbar\PerfectScrollbar::begin([
-        'width' => 200,
-        'height' => 200,
+<?php \mhunesi\scrollbar\PerfectScrollbar::begin([
+        'width' => '200px',
+        'height' => '200px',
         'options' => [
             'class' => 'p-2 mb-5',
         ],
@@ -41,6 +41,6 @@ Once the extension is installed, simply use it in your code by  :
 
     <p> HTML Content </p>
 
-<?= \mhunesi\scrollbar\PerfectScrollbar::end() ?>
+<?php \mhunesi\scrollbar\PerfectScrollbar::end() ?>
 
 ```
